@@ -26,8 +26,7 @@ index=main source="WinEventLog:Security"
   - 4625 — Failed logon
   - 4688 — Process creation
 
-<img src="./media/image2.png" alt="Security logs screenshot" width="800" />
-
+![image alt](https://github.com/gavo0909/Splunk-SIEM-Use-Case-Development/blob/d350dcd814e068831bc8dd640d078f834b31f9f5/setup/2.png)
 ## 3. Verify Sysmon Logs
 
 Run this query:

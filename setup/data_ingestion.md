@@ -40,4 +40,4 @@ index=main source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
   - 3 — Network connection
   - 11 — File creation
 
-<img src="./media/image3.png" alt="Sysmon logs screenshot" width="800" />
+![image alt](https://github.com/gavo0909/Splunk-SIEM-Use-Case-Development/blob/24b04f7c5fa9576eec2ab735a1369235f0a5ce5a/setup/3.png)

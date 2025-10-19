@@ -11,7 +11,7 @@ index=main | stats count by EventCode
 - Results show counts grouped by EventCode.
 - If output is non-zero, Splunk is receiving logs.
 
-<img src="./media/image1.png" alt="Event count screenshot" width="800" />
+![image alt](https://github.com/gavo0909/Splunk-SIEM-Use-Case-Development/blob/eb858c1347f3f54bf03b61e3e16c216f870950bf/setup/1.png)
 
 ## 2. Verify Security Logs
 

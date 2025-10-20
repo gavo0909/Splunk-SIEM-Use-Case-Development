@@ -1,0 +1,4 @@
+index=main EventCode=4625 earliest=-15m@m latest=now
+| stats count by Account_Name, src_ip, host
+| where count > 5
+| sort -count

@@ -1,0 +1,6 @@
+index=main (EventCode=4625 OR EventCode=4624) earliest=-60m@m latest=now
+| eval type=case(EventCode==4625,"fail", EventCode==4624,"success")
+| stats count(eval(type="fail")) as failures, count(eval(type="success")) as successes, latest(_time) as last_time by Account_Name, src_ip
+| where failures > 5 AND successes > 0 AND last_time > relative_time(now(), "-60m")
+| sort -failures
+

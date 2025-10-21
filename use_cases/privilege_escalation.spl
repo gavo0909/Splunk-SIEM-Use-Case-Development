@@ -1,0 +1,11 @@
+# File: use_cases/privilege_escalation.spl
+# Use case: Privilege Escalation Attempt
+# MITRE: T1078 (Valid Accounts)
+# Event: Windows Event ID 4672 - Special privileges assigned to new logon
+# Author: <your name>
+# Created: 2025-10-21
+
+index=main EventCode=4672 earliest=-24h@h latest=now
+| eval Account_Name=coalesce(Account_Name, User)
+| stats count, values(Privilege) as Privileges, earliest(_time) as first_seen, latest(_time) as last_seen by Account_Name, TargetUserName, ComputerName
+| sort -count
